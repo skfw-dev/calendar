@@ -73,6 +73,25 @@ Returns a full calendar grid including padding days from adjacent months.
 
 Returns only those weeks that belong to the target month based on the configured threshold logic.
 
+## Releasing New Versions
+
+To release a new stable version and ensure it appears on [pkg.go.dev](https://pkg.go.dev):
+
+1. **Tag the version**: Use semantic versioning (vX.Y.Z).
+
+   ```bash
+   git tag v1.0.0
+   git push origin v1.0.0
+   ```
+
+2. **Trigger fetch**: Inform the Go proxy about the new version.
+
+   ```bash
+   go list -m github.com/skfw-dev/calendar@v1.0.0
+   ```
+
+3. **Verify**: Visit `https://pkg.go.dev/github.com/skfw-dev/calendar` to see the updated version.
+
 ## License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
