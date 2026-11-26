@@ -1,0 +1,3 @@
+module github.com/skfw-dev/calendar
+
+go 1.25.6
